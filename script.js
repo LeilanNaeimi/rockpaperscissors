@@ -79,7 +79,6 @@ function buttonClicked(PlayerSelected, playerStr) {
     result.innerHTML = "Tie!";
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
-    // console.log("Tie!");
   }
 
   if (
@@ -94,7 +93,6 @@ function buttonClicked(PlayerSelected, playerStr) {
     winnerArr.push(pWin, cWin);
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
-    // console.log(pWin, cWin);
   }
 
   if (
@@ -109,7 +107,6 @@ function buttonClicked(PlayerSelected, playerStr) {
     winnerArr.push(pWin, cWin);
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
-    // console.log(pWin, cWin);
   }
   game();
 }
