@@ -62,7 +62,6 @@ btnRock.addEventListener("click", function () {
 
 function buttonClicked(PlayerSelected, playerStr) {
   //check if score count reach 5
-  game();
 
   const computerSelected = Math.floor(Math.random() * 3);
 
@@ -76,6 +75,7 @@ function buttonClicked(PlayerSelected, playerStr) {
     (PlayerSelected === 2 && computerSelected === 2)
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
+    result.style.color = "#2b3467";
     result.innerHTML = "Tie!";
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
@@ -88,7 +88,8 @@ function buttonClicked(PlayerSelected, playerStr) {
     (PlayerSelected === 2 && computerSelected === 0)
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
-    result.innerHTML = `You Win!, ${playerStr} beats ${computerStr}`;
+    result.style.color = "#65B741";
+    result.innerHTML = `This round You Win!, ${playerStr} beats ${computerStr}`;
     pWin++;
     winnerArr.push(pWin, cWin);
     playeScore.innerHTML = pWin;
@@ -102,29 +103,28 @@ function buttonClicked(PlayerSelected, playerStr) {
     (PlayerSelected === 2 && computerSelected === 1)
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
-    result.innerHTML = `You Loose!, ${computerStr} beats ${playerStr}`;
+    result.style.color = "#eb455f";
+    result.innerHTML = `This round You Loose!, ${computerStr} beats ${playerStr}`;
     cWin++;
     winnerArr.push(pWin, cWin);
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
     // console.log(pWin, cWin);
   }
+  game();
 }
 // }
 
 const game = function () {
-  console.log(pWin, cWin);
-  if (pWin === 4 || cWin === 5) {
-    choice.innerHTML = "";
-    result.innerHTML = `You Win!`;
-
-    // if (pWin > cWin) {
-    //   choice.innerHTML = "";
-    //   result.innerHTML = `You Win!`;
-    // } else {
-    //   choice.innerHTML = "";
-    //   result.innerHTML = `You Loose!,`;
-    // }
+  console.log("game function" + pWin + cWin);
+  if (pWin === 5 || cWin === 5) {
+    if (pWin > cWin) {
+      choice.innerHTML = "";
+      result.innerHTML = `You Win!`;
+    } else {
+      choice.innerHTML = "";
+      result.innerHTML = `You Loose!,`;
+    }
     console.log("end game");
     endGame();
   }

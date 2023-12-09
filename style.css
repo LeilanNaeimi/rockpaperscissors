@@ -1,26 +1,34 @@
-* {
+*,
+*:before,
+*:after {
   margin: 0;
   padding: 0;
-}
-
-html {
-  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 body {
+  font-family: monospace, sans-serif;
+  /* font-weight: 400; */
+  line-height: 3rem;
+  background-size: cover;
   background-color: #eb455f;
   columns: #fcffe7;
   position: relative;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 h1 {
   color: #fcffe7;
   margin-bottom: 3rem;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .container {
-  margin: 25rem 0 20rem 0;
+  margin: 30rem 0 20rem 0;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -48,8 +56,8 @@ h1 {
 }
 
 .text {
-  width: 40rem;
-  height: 10rem;
+  width: 42rem;
+  height: 12rem;
   background-color: #fcffe7;
   border: none;
   border-radius: 1rem;
