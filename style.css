@@ -23,7 +23,7 @@ html {
 
 h1 {
   color: #fcffe7;
-  margin-bottom: 3rem;
+  margin: 1rem 0 3rem 0;
   font-size: 3rem;
 }
 
@@ -36,6 +36,9 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
+  width: 45rem;
+  border: 1px solid #fcffe7;
+  border-radius: 1rem;
 }
 
 .btn {
@@ -56,7 +59,7 @@ h1 {
 }
 
 .text {
-  width: 42rem;
+  width: 40rem;
   height: 12rem;
   background-color: #fcffe7;
   border: none;
