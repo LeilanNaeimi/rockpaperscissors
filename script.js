@@ -76,6 +76,7 @@ function buttonClicked(PlayerSelected, playerStr) {
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
     result.style.color = "#2b3467";
+    result.style.fontSize = "medium";
     result.innerHTML = "Tie!";
     playeScore.innerHTML = pWin;
     ComputerScore.innerHTML = cWin;
@@ -88,6 +89,7 @@ function buttonClicked(PlayerSelected, playerStr) {
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
     result.style.color = "#65B741";
+    result.style.fontSize = "medium";
     result.innerHTML = `This round You Win!, ${playerStr} beats ${computerStr}`;
     pWin++;
     winnerArr.push(pWin, cWin);
@@ -102,6 +104,7 @@ function buttonClicked(PlayerSelected, playerStr) {
   ) {
     choice.innerHTML = `Your choice is ${playerStr} and computer choice is ${computerStr}`;
     result.style.color = "#eb455f";
+    result.style.fontSize = "medium";
     result.innerHTML = `This round You Loose!, ${computerStr} beats ${playerStr}`;
     cWin++;
     winnerArr.push(pWin, cWin);
@@ -117,10 +120,12 @@ const game = function () {
   if (pWin === 5 || cWin === 5) {
     if (pWin > cWin) {
       choice.innerHTML = "";
+      result.style.fontSize = "xx-large";
       result.innerHTML = `You Win!`;
     } else {
       choice.innerHTML = "";
-      result.innerHTML = `You Loose!,`;
+      result.style.fontSize = "xx-large";
+      result.innerHTML = `You Loose!`;
     }
     console.log("end game");
     endGame();
