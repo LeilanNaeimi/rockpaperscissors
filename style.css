@@ -39,6 +39,7 @@ h1 {
   width: 45rem;
   border: 1px solid #fcffe7;
   border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 5px rgba(25, 25, 25, 0.25);
 }
 
 .btn {
